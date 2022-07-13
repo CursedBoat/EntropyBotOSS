@@ -41,12 +41,14 @@ namespace Entropy{
             await pCommands.InitializeAsync();
             
 
+            #pragma warning disable CS1998 //Just disabling the unimportant error in this case
             //Logging if it's ready on console
             _client.Log += async(LogMessage msg) => { Console.WriteLine(msg.Message); };
             _client.Ready += async() => { 
                 Console.WriteLine("Bot's ready shitter"); 
                 await sCommands.RegisterCommandsGloballyAsync();
                 };
+            #pragma warning disable CS1998
 
             await _client.LoginAsync(TokenType.Bot, Config.token);
             //await _client.LoginAsync(TokenType.Bot, Config.testToken2); //Just for testing purposes, don't pay attention to this

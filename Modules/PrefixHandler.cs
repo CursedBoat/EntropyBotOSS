@@ -15,9 +15,11 @@ namespace Entropy{
             _commands = commands;
         }
 
+        #pragma warning disable CS1998 //Just disabling the unimportant error in this case
         public async Task InitializeAsync(){
             _client.MessageReceived += HandleCommandAsync;
         }
+        #pragma warning disable CS1998
 
         public void AddModule<T>(){
             _commands.AddModuleAsync<T>(null);
@@ -33,15 +35,13 @@ namespace Entropy{
                 message.HasMentionPrefix(_client.CurrentUser, ref argPos)) ||
                 message.Author.IsBot)
                 return;
-            
+
             var context = new SocketCommandContext(_client, message);
 
             await _commands.ExecuteAsync(
                 context: context,
                 argPos: argPos,
                 services: null);
-            
-
         }
     }
 }

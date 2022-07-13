@@ -1,0 +1,8 @@
+        case "":
+                    if (type == "usage"){ return "e!"; }
+                    else if (type == "example") { return "e!"; }
+                    else if (type == "info") { return ""; }
+                    else if (type == "aliases") { return ""; }
+                    else { return "Invalid argument."; }
+
+## USE THIS TEMPLATE WHILE DOCUMENTING COMMANDS ##
