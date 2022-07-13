@@ -7,7 +7,7 @@
 ## Exciting features 😻😻😻
 - Goes online 🤯
 - Has commands 🤩
-- Dynamic command help (?) 🤔
+- Dynamic help command database (?) 🤔 (you have to manually create entries but.. ok stfu)
 - Can spank people 😏
 
 ## To-do list 📃
