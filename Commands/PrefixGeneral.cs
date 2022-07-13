@@ -71,7 +71,7 @@ namespace Entropy.Commands{
                 var embed = new EmbedBuilder()
                     .WithTitle("Index of commands.")
                     .AddField("Do ``e!help <command>`` to recieve info about a specific command (case sensitive)", _response, true)
-                    .WithFooter("You can pass another argument that shows what kind of documentation you wish to view. Possible arguments are: info (default), example, and usage")
+                    .WithFooter("Go get some help")
                     .Build();
 
                 await Context.Message.ReplyAsync(embed: embed);
